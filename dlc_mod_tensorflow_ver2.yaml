@@ -12,15 +12,15 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: dlc-tf-tensorflow
+  name: dlc-tf-tensorflow-ver-2
 spec:
   containers:
-  - name: dlc-tf-tensorflow
+  - name: dlc-tf-tensorflow-ver-2
     image: gcr.io/deeplearning-platform-release/tf2-cpu.2-0 
     volumeMounts:
-      - name: dlc-tensorflow-volume
+      - name: dlc-tensorflow-volume-ver-2
         mountPath: /home
   volumes:
-  - name: dlc-tensorflow-volume
+  - name: dlc-tensorflow-volume-ver-2
     persistentVolumeClaim:
-      claimName: dlc-persistent-tensorflow-volume-claim
+      claimName: dlc-persistent-tensorflow-volume-ver-2-claim
